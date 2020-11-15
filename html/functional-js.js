@@ -1,6 +1,6 @@
 (function() {
 
-	function SimpleWidget(spec) {
+	function SimpleWidget(args) {
 		var instance = {}; // <-- A
 		var headline, description; // <-- B
 
@@ -8,7 +8,7 @@
 			var div = d3.select('body').append('div');
 			div.append('h3').text(headline); // <-- C
 			div.attr('class', 'box')
-				.attr('style', 'color:' + spec.color + '; outline:solid 1px green') // <-- D
+				.attr('style', 'color:' + args.color + '; outline:solid 1px green') // <-- D
 				.append('p')
 					.text(description); // <-- E
 			return instance; // <-- F
